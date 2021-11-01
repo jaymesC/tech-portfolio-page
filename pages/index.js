@@ -8,8 +8,13 @@ export default function Home() {
         Exp<span className={styles.underline}>erie</span>nce
       </h1>
       <div className={styles.content}>
-        <div className={styles.names}><h2>TOMMY</h2></div>
-        <div className={styles.position}><h4>Full stack web developer</h4></div>
+        <div className={styles.names}>
+          <h2>TOMMY</h2>
+        </div>
+        <div className={styles.position}>
+          <h4>Full stack web developer</h4>
+          <p>helo</p>
+        </div>
       </div>
     </div>
   );
