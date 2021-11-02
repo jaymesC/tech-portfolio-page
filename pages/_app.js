@@ -13,8 +13,9 @@ function MyApp() {
         </div>
         <div className="position">
           <h4>Full stack web developer</h4>
-          <p>TOMMY</p>
-
+          <p>
+            <span>TOMMY</span>
+          </p>
         </div>
       </div>
     </div>

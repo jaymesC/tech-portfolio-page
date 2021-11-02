@@ -39,7 +39,9 @@
 
 }
 
-.position p{
+.position span{
   color: #617D98;
   background: #DAE2EC;
+  padding: 5px;
+  /* margin-right: 10rem; */
 }
