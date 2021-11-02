@@ -42,6 +42,9 @@ function MyApp() {
           </div>
         </div>
       </div>
+      <div className="button-container">
+      <button>MORE INFO</button>
+      </div>
     </div>
   );
 }
