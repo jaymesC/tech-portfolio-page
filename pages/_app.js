@@ -13,11 +13,8 @@ function MyApp() {
         </div>
         <div className="position">
           <h4>Full stack web developer</h4>
-          <p>helo</p>
-          <p>helo</p>
-          <p>helo</p>
-          <p>helo</p>
-          <p>helo</p>
+          <p>TOMMY</p>
+
         </div>
       </div>
     </div>
