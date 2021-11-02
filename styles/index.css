@@ -10,11 +10,11 @@
 }
 
 .content {
+  margin-top: 4rem;
   margin-left: 15rem;
   margin-right: 8rem;
   display: flex;
-  align-items: center;
-  /* justify-content: center; */
+  /* justify-content: space-around; */
 }
 
 .names h2{
