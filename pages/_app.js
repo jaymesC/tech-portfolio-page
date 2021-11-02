@@ -1,5 +1,6 @@
-import '../styles/globals.css'
-import '../styles/index.css'
+import "../styles/globals.css";
+import "../styles/index.css";
+import { ChevronDoubleRightIcon } from "@heroicons/react/solid";
 
 function MyApp() {
   return (
@@ -15,10 +16,34 @@ function MyApp() {
           <h4>Full stack web developer</h4>
           <span>TOMMY</span>
           <p>December 2015 - Present</p>
+          <div className="write-up">
+            <ChevronDoubleRightIcon className="icon" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              voluptatibus debitis ipsa sunt nihil, quam non exercitationem rem?
+              Et laudantium sunt odio hic?
+            </p>
+          </div>
+          <div className="write-up">
+            <ChevronDoubleRightIcon className="icon" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              voluptatibus debitis ipsa sunt nihil, quam non exercitationem rem?
+              Et laudantium sunt odio hic?
+            </p>
+          </div>
+          <div className="write-up">
+            <ChevronDoubleRightIcon className="icon" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              voluptatibus debitis ipsa sunt nihil, quam non exercitationem rem?
+              Et laudantium sunt odio hic?
+            </p>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-export default MyApp
+export default MyApp;

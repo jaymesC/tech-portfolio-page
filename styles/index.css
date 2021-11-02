@@ -16,7 +16,6 @@
   margin-left: 15rem;
   margin-right: 8rem;
   display: flex;
-  /* justify-content: space-around; */
 }
 
 .names h2{
@@ -61,4 +60,24 @@
     font-size: 18px;
     font-weight: 400;
     color: rgb(97, 125, 152);
+}
+
+.icon {
+    color: #2caeba;
+    height: 20px;
+    margin-right: 2rem;
+}
+
+.write-up {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 6rem;
+}
+
+.write-up p{
+    color:  rgb(50, 77, 103);
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
 }
