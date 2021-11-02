@@ -20,17 +20,18 @@
 
 .names h2 {
   color: black;
-  padding-left: 10px;
+  padding-left: 30px;
   padding-right: 10px;
   padding-bottom: 10px;
   border-left: 5px solid #f1f5f8;
-  font-weight: 100;
+  font-weight: 400;
+  font-size: 22px;
 }
 
 .names h2:hover {
-  color: red;
+  color: #2caeba;
   cursor: pointer;
-  border-left: 5px solid red;
+  border-left: 5px solid #2caeba;
 }
 
 .position {
@@ -87,14 +88,17 @@
   align-items: center;
 }
 
-button {
+.button-container button {
   background-color: #2caeba;
   color: #fff;
   padding-left: 4rem;
   padding-right: 4rem;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  font-size: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   border-radius: 4px;
+  transition: ease-in-out 0.3s all;
   border: none;
   margin-top: 4rem;
+  cursor: pointer;
 }
