@@ -13,9 +13,8 @@ function MyApp() {
         </div>
         <div className="position">
           <h4>Full stack web developer</h4>
-          <p>
-            <span>TOMMY</span>
-          </p>
+          <span>TOMMY</span>
+          <p>December 2015 - Present</p>
         </div>
       </div>
     </div>
