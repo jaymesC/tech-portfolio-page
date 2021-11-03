@@ -11,7 +11,7 @@ function MyApp() {
       <div className="content">
         <div className="names">
           <h2>TOMMY</h2>
-          <h2>BIGDR0P</h2>
+          <h2>BIGDROP</h2>
           <h2>CUKER</h2>
         </div>
         <div className="position">
