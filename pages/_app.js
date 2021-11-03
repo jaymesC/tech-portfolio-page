@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import "../styles/index.css";
 import { ChevronDoubleRightIcon } from "@heroicons/react/solid";
+import { data } from "../data";
 
 function MyApp() {
   return (
@@ -14,38 +15,25 @@ function MyApp() {
           <h2>BIGDROP</h2>
           <h2>CUKER</h2>
         </div>
-        <div className="position">
-          <h4>Full stack web developer</h4>
-          <span>TOMMY</span>
-          <p>December 2015 - Present</p>
-          <div className="write-up">
-            <ChevronDoubleRightIcon className="icon" />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              voluptatibus debitis ipsa sunt nihil, quam non exercitationem rem?
-              Et laudantium sunt odio hic?
-            </p>
-          </div>
-          <div className="write-up">
-            <ChevronDoubleRightIcon className="icon" />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              voluptatibus debitis ipsa sunt nihil, quam non exercitationem rem?
-              Et laudantium sunt odio hic?
-            </p>
-          </div>
-          <div className="write-up">
-            <ChevronDoubleRightIcon className="icon" />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              voluptatibus debitis ipsa sunt nihil, quam non exercitationem rem?
-              Et laudantium sunt odio hic?
-            </p>
-          </div>
+        {data.map((person) => (
+        <div className="position" key={person.name}>
+          <h4>{person.position}</h4>
+          <span>{person.name}</span>
+          <p>{person.duration}</p>
+          {person.descriptions.map((x, index) => (
+            <div className="write-up" key={index}>
+              <ChevronDoubleRightIcon className="icon" />
+              <p>
+               {x}
+              </p>
+            </div>
+          ))}
         </div>
+
+        ))}
       </div>
       <div className="button-container">
-      <button>MORE INFO</button>
+        <button>MORE INFO</button>
       </div>
     </div>
   );
