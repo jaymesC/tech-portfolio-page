@@ -7,14 +7,6 @@ import React from "react";
 function MyApp() {
   const [count, setCount] = React.useState(0);
 
-  const handleClick = function () {
-    setCount(count +1);
-  };
-
-  const test = () => {
-    setCount(previousCount => previousCount + 1);   
-  }
-
   return (
     <div className="container">
       <h1>
