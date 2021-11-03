@@ -22,8 +22,8 @@ function MyApp() {
           <h4>{data[count].position}</h4>
           <span>{data[count].name}</span>
           <p>{data[count].duration}</p>
-          {data[count].descriptions.map((x) => (
-            <div className="write-up" key={x.name}>
+          {data[count].descriptions.map((x, index) => (
+            <div className="write-up" key={index}>
               <ChevronDoubleRightIcon className="icon" />
               <p>{x}</p>
             </div>
