@@ -8,7 +8,11 @@ function MyApp() {
   const [count, setCount] = React.useState(0);
 
   const handleClick = function () {
-    setCount(count + 1);
+    setCount(count +1);
+  };
+
+  const test = () => {
+    setCount(previousCount => previousCount + 1);   
   }
 
   return (
@@ -18,20 +22,21 @@ function MyApp() {
       </h1>
       <div className="content">
         <div className="names">
-          <h2 onClick={handleClick}>TOMMY</h2>
-          <h2 oncClick={() => setCount(count -1)}>BIGDROP</h2>
-          <h2>CUKER</h2>
+          <h2 onClick={() => setCount((count = 0))}>TOMMY</h2>
+          <h2 onClick={() => setCount((count = 1))}>BIGDROP</h2>
+          <h2 onClick={() => setCount((count = 2))}>CUKER</h2>
         </div>
-          <div className="position" >
-            <h4>{data[count].position}</h4>
-            <span>{data[count].name}</span>
-            <p>{data[count].duration}</p>
-            
-              <div className="write-up" >
-                <ChevronDoubleRightIcon className="icon" />
-                <p>{data.descriptions}</p>
-              </div>
-          </div>
+        <div className="position">
+          <h4>{data[count].position}</h4>
+          <span>{data[count].name}</span>
+          <p>{data[count].duration}</p>
+          {data[count].descriptions.map((x) => (
+            <div className="write-up" key={x.name}>
+              <ChevronDoubleRightIcon className="icon" />
+              <p>{x}</p>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="button-container">
         <button>MORE INFO</button>
