@@ -1,11 +1,17 @@
+import {useState, useEffect} from "react";
 import "../styles/globals.css";
 import "../styles/index.css";
 import { ChevronDoubleRightIcon } from "@heroicons/react/solid";
 import { data } from "../data";
-import React from "react";
 
 function MyApp() {
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() =>{
+    setTimeout(() =>{
+      <h1>Loading...</h1>
+    }, 3000)
+  },[])
 
   return (
     <div className="container">

@@ -33,4 +33,3 @@ export const data = [
   },
 ];
 
-console.log(data[0].name)
