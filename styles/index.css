@@ -110,3 +110,7 @@
 background-color: #88EBF2;
 color: rgb(4, 78, 83);
 }
+
+.loading {
+  text-align: center;
+}

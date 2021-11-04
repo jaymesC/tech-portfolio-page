@@ -6,12 +6,23 @@ import { data } from "../data";
 
 function MyApp() {
   const [count, setCount] = useState(0);
+  const [isloading, setIsLoading] = useState(true);
+
+  const loading = () => {
+    setIsLoading(false);
+  }
 
   useEffect(() =>{
-    setTimeout(() =>{
-      <h1>Loading...</h1>
-    }, 3000)
-  },[])
+    setTimeout(loading, 2000)
+  },[]);
+
+  if(isloading) {
+    return (
+      <div className="loading">
+        <h1>Loading...</h1>
+      </div>
+    )
+  }
 
   return (
     <div className="container">
