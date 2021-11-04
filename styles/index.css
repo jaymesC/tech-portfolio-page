@@ -107,10 +107,14 @@
 }
 
 .button-container button:hover {
-background-color: #88EBF2;
-color: rgb(4, 78, 83);
+  background-color: #88ebf2;
+  color: rgb(4, 78, 83);
 }
 
 .loading {
-  text-align: center;
+  display: flex;
+  font-size: 15rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10rem;
 }
