@@ -3,6 +3,8 @@ import "../styles/globals.css";
 import "../styles/index.css";
 import { ChevronDoubleRightIcon } from "@heroicons/react/solid";
 import { data } from "../data";
+import Spinner from "react-svg-spinner";
+
 
 function MyApp() {
   const [count, setCount] = useState(0);
@@ -19,7 +21,7 @@ function MyApp() {
   if(isloading) {
     return (
       <div className="loading">
-        <h1>Loading...</h1>
+        <Spinner/>
       </div>
     )
   }
