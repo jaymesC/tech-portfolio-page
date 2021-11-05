@@ -18,7 +18,7 @@
   display: flex;
 }
 
-.names h2 {
+ h2 {
   color: black;
   padding-left: 40px;
   padding-right: 10px;
@@ -30,7 +30,7 @@
   margin-bottom: 1rem;
 }
 
-.names h2:hover {
+ h2:hover {
   color: #2caeba;
   transition: ease-in-out 0.5s all;
   cursor: pointer;

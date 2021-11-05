@@ -19,12 +19,14 @@ function MyApp() {
 
   const bigDrop = (id) => {
     setCount((count = 1));
-    console.log(id)
+    setIsActive(!isactive);
+    console.log(id);
   }
 
   const cuker = (id) => {
     setCount((count = 2));
-    console.log(id)
+    setIsActive(!isactive);
+    console.log(id);
   }
 
   
@@ -50,9 +52,14 @@ function MyApp() {
       <h1>
         Exp<span className="underline">erie</span>nce
       </h1>
-      <div className={`content ${isactive ? 'active': ''}`}>
-        <div className="names">
-          <h2 onClick={() => clickHandler(data[0].id)}>TOMMY</h2>
+      <div className="content">
+        <div>
+          <h2
+            className={`names ${isactive ? "active" : ""}`}
+            onClick={() => clickHandler(data[0].id)}
+          >
+            TOMMY
+          </h2>
           <h2 onClick={() => bigDrop(data[1].id)}>BIGDROP</h2>
           <h2 onClick={() => cuker(data[2].id)}>CUKER</h2>
         </div>
