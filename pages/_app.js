@@ -25,7 +25,6 @@ function MyApp() {
   const cuker = (id) => {
     setCount((count = 2));
     console.log(id)
-
   }
 
   
