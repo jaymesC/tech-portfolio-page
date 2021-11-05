@@ -13,7 +13,7 @@ function MyApp() {
 
   const clickHandler = (id) => {
     setCount((count = 0));
-    // setIsActive(!isactive);
+    setIsActive(!isactive);
     console.log(id)
   }
 
@@ -50,11 +50,11 @@ function MyApp() {
       <h1>
         Exp<span className="underline">erie</span>nce
       </h1>
-      <div className="content">
+      <div className={`content ${isactive ? 'active': ''}`}>
         <div className="names">
-          <h2 onClick={() => clickHandler(data[0].id)} >TOMMY</h2>
-          <h2 onClick={() => bigDrop(data[1].id)} >BIGDROP</h2>
-          <h2 onClick={() => cuker(data[2].id)} >CUKER</h2>
+          <h2 onClick={() => clickHandler(data[0].id)}>TOMMY</h2>
+          <h2 onClick={() => bigDrop(data[1].id)}>BIGDROP</h2>
+          <h2 onClick={() => cuker(data[2].id)}>CUKER</h2>
         </div>
         <div className="position">
           <h4>{data[count].position}</h4>
