@@ -9,19 +9,20 @@ import Spinner from "react-svg-spinner";
 function MyApp() {
   const [count, setCount] = useState(0);
   const [isloading, setIsLoading] = useState(true);
+  const [isactive, setIsActive] = useState(false);
 
   const loading = () => {
     setIsLoading(false);
   }
 
   useEffect(() =>{
-    setTimeout(loading, 2000)
+    setTimeout(loading, 1500)
   },[]);
 
   if(isloading) {
     return (
       <div className="loading">
-        <Spinner/>
+        <Spinner />
       </div>
     )
   }
