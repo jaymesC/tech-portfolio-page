@@ -37,6 +37,10 @@
   border-left: 5px solid #2caeba;
 }
 
+.active {
+  border-left: 5px solid #2caeba;
+}
+
 .position {
   font-size: 25px;
   margin-left: 5rem;

@@ -1,5 +1,6 @@
 export const data = [
   {
+    id: 1,
     position: "Full Stack Web Developer",
     name: "TOMMY",
     duration: "December 2015 - Present",
@@ -10,6 +11,7 @@ export const data = [
     ],
   },
   {
+    id: 2,
     position: "Front-End Engineer",
     name: "BIGDROP",
     duration: "May 2015 - December 2015",
@@ -21,6 +23,7 @@ export const data = [
     ],
   },
   {
+    id: 3,
     position: "Engineering Intern",
     name: "CUKER",
     duration: "May 2014 - September 2015",

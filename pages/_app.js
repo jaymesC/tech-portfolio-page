@@ -11,12 +11,34 @@ function MyApp() {
   const [isloading, setIsLoading] = useState(true);
   const [isactive, setIsActive] = useState(false);
 
+  const clickHandler = (id) => {
+    setCount((count = 0));
+    // setIsActive(!isactive);
+    console.log(id)
+  }
+
+  const bigDrop = (id) => {
+    setCount((count = 1));
+    console.log(id)
+    if (id === data.id) {
+      
+    }
+  }
+
+  const cuker = (id) => {
+    setCount((count = 2));
+    console.log(id)
+
+  }
+
+  
+
   const loading = () => {
     setIsLoading(false);
   }
 
   useEffect(() =>{
-    setTimeout(loading, 1500)
+    setTimeout(loading, 1000)
   },[]);
 
   if(isloading) {
@@ -34,9 +56,9 @@ function MyApp() {
       </h1>
       <div className="content">
         <div className="names">
-          <h2 onClick={() => setCount((count = 0))}>TOMMY</h2>
-          <h2 onClick={() => setCount((count = 1))}>BIGDROP</h2>
-          <h2 onClick={() => setCount((count = 2))}>CUKER</h2>
+          <h2 onClick={() => clickHandler(data[0].id)} >TOMMY</h2>
+          <h2 onClick={() => bigDrop(data[1].id)} >BIGDROP</h2>
+          <h2 onClick={() => cuker(data[2].id)} >CUKER</h2>
         </div>
         <div className="position">
           <h4>{data[count].position}</h4>
