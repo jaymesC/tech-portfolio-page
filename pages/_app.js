@@ -20,9 +20,6 @@ function MyApp() {
   const bigDrop = (id) => {
     setCount((count = 1));
     console.log(id)
-    if (id === data.id) {
-      
-    }
   }
 
   const cuker = (id) => {
