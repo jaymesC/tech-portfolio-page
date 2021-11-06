@@ -21,7 +21,7 @@ function MyApp() {
     // console.log(id)
   }
 
-  let activeStatus = {isactive}
+  // let activeStatus = {isactive}
 
   const bigDrop = (id) => {
     setCount((count = id));
@@ -62,8 +62,8 @@ function MyApp() {
         <div>
           {data.map((x) => (
         <h2 key={x.id}
-          className={`names ${activeStatus[0] ? "active" : ""}`}
-          onClick={() => clickHandler(data[0].id)}
+          className={`names`}
+          onClick={() => clickHandler(x.id)}
         >
           {x.name}
         </h2>
