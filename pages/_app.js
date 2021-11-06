@@ -9,22 +9,28 @@ import Spinner from "react-svg-spinner";
 function MyApp() {
   const [count, setCount] = useState(0);
   const [isloading, setIsLoading] = useState(true);
-  const [isactive, setIsActive] = useState(false);
+  const [isactive, setIsActive] = useState([]);
+
 
   const clickHandler = (id) => {
-    setCount((count = 0));
-    setIsActive(!isactive);
-    console.log(id)
+    setCount((count = id));
+    
+    // let activeState = [];
+    // activeState[e.target] = true;
+    // setIsActive({isactive: activeState});
+    // console.log(id)
   }
 
+  let activeStatus = {isactive}
+
   const bigDrop = (id) => {
-    setCount((count = 1));
+    setCount((count = id));
     setIsActive(!isactive);
     console.log(id);
   }
 
   const cuker = (id) => {
-    setCount((count = 2));
+    setCount((count = id));
     setIsActive(!isactive);
     console.log(id);
   }
@@ -55,19 +61,19 @@ function MyApp() {
       <div className="content">
         <div>
           <h2
-            className={`names ${isactive ? "active" : ""}`}
+            className={`names ${activeStatus[0] ? "active" : ""}`}
             onClick={() => clickHandler(data[0].id)}
           >
             TOMMY
           </h2>
           <h2
-            className={`names ${isactive ? "active" : ""}`}
+            className={`names ${activeStatus[1] ? "active" : ""}`}
             onClick={() => bigDrop(data[1].id)}
           >
             BIGDROP
           </h2>
           <h2
-            className={`names ${isactive ? "active" : ""}`}
+            className={`names ${activeStatus[2] ? "active" : ""}`}
             onClick={() => cuker(data[2].id)}
           >
             CUKER
