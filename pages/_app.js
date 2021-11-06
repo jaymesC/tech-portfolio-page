@@ -14,25 +14,6 @@ function MyApp() {
 
   const clickHandler = (id) => {
     setCount((count = id));
-    
-    // let activeState = [];
-    // activeState[e.target] = true;
-    // setIsActive({isactive: activeState});
-    // console.log(id)
-  }
-
-  // let activeStatus = {isactive}
-
-  const bigDrop = (id) => {
-    setCount((count = id));
-    setIsActive(!isactive);
-    console.log(id);
-  }
-
-  const cuker = (id) => {
-    setCount((count = id));
-    setIsActive(!isactive);
-    console.log(id);
   }
 
   
@@ -70,20 +51,6 @@ function MyApp() {
             
           ))}
         </div>
-        {/* <div>
-          <h2
-            className={`names ${activeStatus[1] ? "active" : ""}`}
-            onClick={() => bigDrop(data[1].id)}
-          >
-            BIGDROP
-          </h2>
-          <h2
-            className={`names ${activeStatus[2] ? "active" : ""}`}
-            onClick={() => cuker(data[2].id)}
-          >
-            CUKER
-          </h2>
-        </div> */}
         <div className="position">
           <h4>{data[count].position}</h4>
           <span>{data[count].name}</span>
