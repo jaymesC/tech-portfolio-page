@@ -60,12 +60,17 @@ function MyApp() {
       </h1>
       <div className="content">
         <div>
-          <h2
-            className={`names ${activeStatus[0] ? "active" : ""}`}
-            onClick={() => clickHandler(data[0].id)}
-          >
-            TOMMY
-          </h2>
+          {data.map((x) => (
+        <h2 key={x.id}
+          className={`names ${activeStatus[0] ? "active" : ""}`}
+          onClick={() => clickHandler(data[0].id)}
+        >
+          {x.name}
+        </h2>
+            
+          ))}
+        </div>
+        {/* <div>
           <h2
             className={`names ${activeStatus[1] ? "active" : ""}`}
             onClick={() => bigDrop(data[1].id)}
@@ -78,7 +83,7 @@ function MyApp() {
           >
             CUKER
           </h2>
-        </div>
+        </div> */}
         <div className="position">
           <h4>{data[count].position}</h4>
           <span>{data[count].name}</span>
