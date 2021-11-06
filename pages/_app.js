@@ -60,8 +60,18 @@ function MyApp() {
           >
             TOMMY
           </h2>
-          <h2 onClick={() => bigDrop(data[1].id)}>BIGDROP</h2>
-          <h2 onClick={() => cuker(data[2].id)}>CUKER</h2>
+          <h2
+            className={`names ${isactive ? "active" : ""}`}
+            onClick={() => bigDrop(data[1].id)}
+          >
+            BIGDROP
+          </h2>
+          <h2
+            className={`names ${isactive ? "active" : ""}`}
+            onClick={() => cuker(data[2].id)}
+          >
+            CUKER
+          </h2>
         </div>
         <div className="position">
           <h4>{data[count].position}</h4>
