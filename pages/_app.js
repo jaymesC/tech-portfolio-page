@@ -9,11 +9,14 @@ import Spinner from "react-svg-spinner";
 function MyApp() {
   const [count, setCount] = useState(0);
   const [isloading, setIsLoading] = useState(true);
-  const [isactive, setIsActive] = useState([]);
+  const [isactive, setIsActive] = useState(false);
 
 
   const clickHandler = (id) => {
     setCount((count = id));
+    if (data[count].id === id) {
+      setIsActive(true)
+    }
   }
 
   
@@ -43,7 +46,7 @@ function MyApp() {
         <div>
           {data.map((x) => (
         <h2 key={x.id}
-          className={`names`}
+          className={`names ${isactive ? 'active' : ''}`}
           onClick={() => clickHandler(x.id)}
         >
           {x.name}
