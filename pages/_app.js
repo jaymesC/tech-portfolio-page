@@ -1,40 +1,36 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import "../styles/globals.css";
 import "../styles/index.css";
 import { ChevronDoubleRightIcon } from "@heroicons/react/solid";
 import { data } from "../data";
 import Spinner from "react-svg-spinner";
 
-
 function MyApp() {
   const [count, setCount] = useState(0);
   const [isloading, setIsLoading] = useState(true);
   const [isactive, setIsActive] = useState(false);
 
-
   const clickHandler = (id) => {
     setCount((count = id));
     if (data[count].id === id) {
-      setIsActive(true)
+      setIsActive(true);
     }
-  }
-
-  
+  };
 
   const loading = () => {
     setIsLoading(false);
-  }
+  };
 
-  useEffect(() =>{
-    setTimeout(loading, 1000)
-  },[]);
+  useEffect(() => {
+    setTimeout(loading, 1000);
+  }, []);
 
-  if(isloading) {
+  if (isloading) {
     return (
       <div className="loading">
         <Spinner />
       </div>
-    )
+    );
   }
 
   return (
@@ -45,13 +41,13 @@ function MyApp() {
       <div className="content">
         <div>
           {data.map((x) => (
-        <h2 key={x.id}
-          className={`names ${isactive ? 'active' : ''}`}
-          onClick={() => clickHandler(x.id)}
-        >
-          {x.name}
-        </h2>
-            
+            <h2
+              key={x.id}
+              className={`names ${isactive ? "active" : ""}`}
+              onClick={() => clickHandler(x.id)}
+            >
+              {x.name}
+            </h2>
           ))}
         </div>
         <div className="position">
