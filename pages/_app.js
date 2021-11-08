@@ -10,10 +10,9 @@ function MyApp() {
   const [isloading, setIsLoading] = useState(true);
   const [isactive, setIsActive] = useState(0);
 
-  const clickHandler = (index) => {
-    setCount((count = index));
-    setIsActive({isactive : index});
-    console.log(index)
+  const clickHandler = (id) => {
+    setCount((count = id));
+    setIsActive((isactive = id));
   };
 
   const loading = () => {
@@ -39,11 +38,11 @@ function MyApp() {
       </h1>
       <div className="content">
         <div>
-          {data.map((x, index) => (
+          {data.map((x) => (
             <h2
               key={x.id}
-              className={`names ${isactive === index ? 'active' : ''}`}
-              onClick={() => clickHandler(index)}
+              className={`names ${isactive === x.id ? "active" : ""}`}
+              onClick={() => clickHandler(x.id)}
             >
               {x.name}
             </h2>
